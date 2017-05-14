@@ -281,8 +281,7 @@ mobf_spawner_register("wolf_spawner_1",wolf_name,
 	collisionbox = selectionbox_wolf
 	})
 
-if minetest.global_exists("factions") and factions ~= nil and
-	type(factions.set_base_reputation) == "function" then
+if minetest.global_exists("factions") and type(factions.set_base_reputation) == "function" then
 	factions.set_base_reputation("wolfs","players",-25)
 end
 
